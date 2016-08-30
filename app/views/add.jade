@@ -1,0 +1,11 @@
+include ./header.jade
+body(ng-controller='mainController').container.text-center
+  h1 Add to Queue
+  form
+    input.form-control(placeholder='Name' ng-model='addQueue.name')
+    br
+    input.form-control(placeholder='Brief description' ng-model='addQueue.description')
+    br
+    button.btn.btn-success(ng-click="addToQueue()") Submit
+  script(src='/assets/angular/angular.min.js')
+  script(src='/js/angularCore.js')

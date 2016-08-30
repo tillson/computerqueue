@@ -1,0 +1,20 @@
+include ./header.jade
+body(ng-controller='mainController').container.text-center
+  h1 Computer Science II Queue
+  a.btn.btn-success.btn-lg(href="/add") Add
+  br
+  br
+  table.table.table-striped.table-bordered
+    thead
+      tr
+        td Number
+        td Name
+        td Description
+    tbody
+      tr(ng-repeat='person in queue')
+        td.ng-cloak {{$index + 1}}
+        td.ng-cloak {{person['name']}}
+        td.ng-cloak {{person['description']}}
+  br
+  script(src='/assets/angular/angular.min.js')
+  script(src='/js/angularCore.js')
